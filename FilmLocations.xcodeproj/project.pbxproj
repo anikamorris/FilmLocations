@@ -14,6 +14,7 @@
 		CFB442472497EBC3009855FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB442462497EBC3009855FC /* Assets.xcassets */; };
 		CFB4424A2497EBC3009855FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB442482497EBC3009855FC /* LaunchScreen.storyboard */; };
 		CFB442522497EE34009855FC /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = CFB442512497EE34009855FC /* locations.json */; };
+		CFB442542497EFC2009855FC /* FilmEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB442532497EFC2009855FC /* FilmEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CFB442492497EBC3009855FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFB4424B2497EBC3009855FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB442512497EE34009855FC /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		CFB442532497EFC2009855FC /* FilmEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CFB442482497EBC3009855FC /* LaunchScreen.storyboard */,
 				CFB4424B2497EBC3009855FC /* Info.plist */,
 				CFB442512497EE34009855FC /* locations.json */,
+				CFB442532497EFC2009855FC /* FilmEntry.swift */,
 			);
 			path = FilmLocations;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB442542497EFC2009855FC /* FilmEntry.swift in Sources */,
 				CFB442422497EBB9009855FC /* ViewController.swift in Sources */,
 				CFB4423E2497EBB9009855FC /* AppDelegate.swift in Sources */,
 				CFB442402497EBB9009855FC /* SceneDelegate.swift in Sources */,
