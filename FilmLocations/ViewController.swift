@@ -55,13 +55,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
           do {
             if let data = contents,
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String:Any]] {
-              for film in jsonResult{
-                  let firstActor = film["actor_1"] as? String ?? ""
-                  let locations = film["locations"] as? String  ?? ""
-                  let releaseYear = film["release_year"] as? String  ?? ""
-                  let title = film["title"] as? String  ?? ""
-                  let movie = FilmEntry(firstActor: firstActor, locations: locations, releaseYear: releaseYear, title: title)
-                  films.append(movie)
+              for film in jsonResult {
+                let movie = FilmEntry(json: film)
+                if let movie = movie {
+                    films.append(movie)
+                }
               }
             }
             
@@ -74,3 +72,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 }
 
+extension FilmEntry {
+    init?(json: [String: Any]) {
+        guard let locations = json["locations"] as? String,
+            let a1 = json["actor_1"] as? String,
+            let year = json["release_year"] as? String,
+            let title = json["title"] as? String
+            else{
+                return nil
+        }
+        self.firstActor = a1
+        self.releaseYear = year
+        self.title = title
+        self.locations = locations
+    }
+}
